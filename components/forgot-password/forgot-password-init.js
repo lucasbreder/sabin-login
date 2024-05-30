@@ -1,0 +1,1 @@
+setTimeout(()=> window.addEventListener('onload', setUserForgot()), 1000)

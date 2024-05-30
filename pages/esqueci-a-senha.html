@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script type="text/javascript"  src="/helpers/loadPageData.js"></script>
+        <script src="/components/login-form/login-cookies.js"></script>
+        <script src="/components/login-form/login-form.js"></script>
+        <script src="/components/forgot-password/forgot-password.js"></script>
+        <script src="/components/forgot-password/forgot-password-init.js"></script>
+        <script src="/components/thumbs/thumbs.js"></script>
+        <link rel="stylesheet" href="/global.css" />
+        <link rel="icon" href="/images/cropped-512x512-1-32x32.png" sizes="32x32">
+        <link rel="icon" href="/images/cropped-512x512-1-192x192.png" sizes="192x192">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Esqueci a Senha</title>
+    </head>
+
+
+    <body>
+        <div class="page-frame">
+            <header></header>
+            <section class="page-container">
+                <div class="page-info">
+                    <div id='page-content'></div>
+                </div>
+                <div class="page-thumb">
+                    
+                </div>
+            </section>
+        </div>
+        <script>
+            loadPageData('/components/thumbs/thumbs.html', '.page-thumb')
+            loadPageData('/components/header/header.html', 'header')
+            loadPageData('/components/forgot-password/forgot-password.html', '#page-content')
+        </script>
+    </body>
+</html>

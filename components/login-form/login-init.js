@@ -1,0 +1,1 @@
+setTimeout(()=> window.addEventListener('onload', changeInputByCookie()), 1000)
