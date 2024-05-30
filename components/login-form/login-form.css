@@ -38,12 +38,11 @@
 }
 
 .form-container input[type='checkbox'] {
-    width: auto;
     position: relative;
     cursor: pointer;
     width: 0;
-    height: 0;
-    margin-right: 3rem;
+    height: 8px;
+    margin-right: 3.5rem;
 }
 
 .form-container input[type='checkbox']::before {
@@ -64,7 +63,7 @@
 .form-container input[type='checkbox']::after {
     content: "";
     position: absolute;
-    top: -.85rem;
+    top: -.4rem;
     left: 3px;
     width: 16px;
     height: 16px;
