@@ -136,7 +136,7 @@ function sendLogin(form) {
     fetch('').then((response) => {
         if(response.status === 200) {
            nextStep()
-            changeThumb('/images/thumbs/confirm-thumb.png')
+            changeThumb('/sabin/images/thumbs/confirm-thumb.png')
             loading.classList.remove('hide-loading')
         }
     }).then((data) => {
@@ -172,7 +172,7 @@ function sendConfirmation(type, ) {
             nextStep()
             const phoneCard = document.querySelector('.phone-card .card-info');
             const emailCard = document.querySelector('.email-card .card-info');
-            changeThumb('/images/thumbs/login-end-thumb.png')
+            changeThumb('/sabin/images/thumbs/login-end-thumb.png')
 
             steps.querySelector('.validation-container p span').innerText = 
             type === 'email' 
@@ -208,7 +208,7 @@ function sendValidation(form) {
        
         fetch('').then((response) => {
             if(response.status === 200) {
-                window.location.replace("/pages/app.html");
+                window.location.replace("/sabin/pages/app.html");
             }
         }).then((data) => {
     
@@ -275,6 +275,11 @@ function nextStep() {
 
 function prevStep() {
     const currentStep = document.querySelector('.show-step')
+    const stepsContainer = document.querySelector('.steps')
     currentStep.previousElementSibling.classList.add('show-step')
     currentStep.classList.remove('show-step')
+
+    setTimeout(() => {
+        stepsContainer.style.minHeight = (currentStep.previousElementSibling.offsetHeight)+'px'
+    }, 300);
 }

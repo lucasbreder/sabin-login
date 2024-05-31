@@ -17,7 +17,7 @@ function getCityData() {
         if (response.status === 200) {
             nextStep()
             nextStepIndicator()
-            changeThumb('/images/thumbs/confirm-thumb.png')
+            changeThumb('/sabin/images/thumbs/confirm-thumb.png')
             loading.classList.remove('hide-loading')
         }
     }).then((data) => {
@@ -131,7 +131,7 @@ function getSelectContactUpdate(type) {
     if (validateInput(radio, 'requiredChecked')) {
         nextStep()
         nextStepIndicator()
-        changeThumb('/images/thumbs/login-end-thumb.png')
+        changeThumb('/sabin/images/thumbs/login-end-thumb.png')
     }
 
 
@@ -145,7 +145,7 @@ function goToContactInput(type) {
     if(!recoverData.type) {
         return validateInput(cards, 'wrong', 'Selecione um dos tipos de contato')
     }
-    changeThumb('/images/thumbs/confirm-thumb.png')
+    changeThumb('/sabin/images/thumbs/confirm-thumb.png')
     nextStep()
     const stepIndicator = document.querySelector('.step-indicator')
     stepIndicator.classList.add('hide')
@@ -222,7 +222,7 @@ function sendRecover() {
     fetch('').then((response) => {
         if (response.status === 200) {
             nextStep()
-            changeThumb('/images/thumbs/login-end-thumb.png')
+            changeThumb('/sabin/images/thumbs/login-end-thumb.png')
             loading.classList.remove('hide-loading')
         }
     }).then((data) => {

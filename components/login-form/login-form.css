@@ -94,11 +94,11 @@ form button {
     border: none;
     padding: 1rem;
     margin: 2rem 0 0 0;
-    transition: all .5s ease-in-out;
+    transition: all .2s ease-in-out;
     cursor: pointer;
     width: 100%;
 }
-.form-container button:hover {
+form button:hover {
     background-color: var(--secondary-color);
 }
 
@@ -110,11 +110,11 @@ input.hasIcon {
 }
 
 #user {
-    background-image: url('/images/icons/user.svg');
+    background-image: url('/sabin/images/icons/user.svg');
 }
 
 #password {
-    background-image: url('/images/icons/password.svg');
+    background-image: url('/sabin/images/icons/password.svg');
 }
 #show-password {
     position: absolute;
@@ -122,7 +122,7 @@ input.hasIcon {
     top: 14px;
     width: 20px;
     height: 20px;
-    background-image: url('/images/icons/showPassword.svg');
+    background-image: url('/sabin/images/icons/showPassword.svg');
     background-repeat: no-repeat;
     cursor: pointer;
 }
@@ -177,12 +177,12 @@ input.hasIcon {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     #validation-form input {
         border-radius: 10px;
         border: 1px solid #5A5D67;
         text-align: center;
-        width: 40px;
+        width: 35px;
         height: 50px;
         color: var(--primary-color);
         font-weight: 700;

@@ -6,14 +6,14 @@
     z-index: 9;
     background-color: #CCC;
     border-radius: 100%;
-    background-image: url("/images/sabin-logo.svg");
+    background-image: url("/sabin/images/sabin-logo.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 70px;
     height: 70px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .header-logo {
         transform: translate(-50%, 50%);
         top: -150px;

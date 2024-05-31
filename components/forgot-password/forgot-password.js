@@ -9,7 +9,7 @@ function setUserForgot() {
 
     fetch('').then((response) => {
         if(response.status === 200) {
-            changeThumb('/images/thumbs/confirm-thumb.png')
+            changeThumb('/sabin/images/thumbs/confirm-thumb.png')
         }
     }).then((data) => {
 
