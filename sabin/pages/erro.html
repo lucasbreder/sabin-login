@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="/sabin/helpers/loadPageData.js"></script>
+    <script src="/sabin/components/thumbs/thumbs.js"></script>
+    <link rel="stylesheet" href="/sabin/global.css" />
+    <link rel="stylesheet" href="/sabin/components/error/error.css" />
+    <script src="/sabin/components/error/error-init.js"></script>
+    <link rel="icon" href="/sabin/images/cropped-512x512-1-32x32.png" sizes="32x32">
+    <link rel="icon" href="/sabin/images/cropped-512x512-1-192x192.png" sizes="192x192">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Erro</title>
+</head>
+
+
+<body>
+    <div class="page-frame">
+        <header></header>
+        <section class="page-container">
+            <div class="page-info">
+                <div id='page-content'></div>
+            </div>
+            <div class="page-thumb">
+
+            </div>
+        </section>
+    </div>
+    <script>
+        loadPageData('/sabin/components/thumbs/thumbs.html', '.page-thumb')
+        loadPageData('/sabin/components/header/header.html', 'header')
+        loadPageData('/sabin/components/error/error.html', '#page-content')
+    </script>
+</body>
+
+</html>

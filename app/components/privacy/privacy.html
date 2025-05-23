@@ -1,0 +1,42 @@
+<div class="privacy-container">
+    <div class="privacy-tools">
+        <div class="privacy-title">Gestão de Consentimentos</div>
+        <nav class="privacy-nav">
+            <ul>
+                <li>O que deseja?</li>
+                <li onclick="changeActivePrivacyMenu(this, '/app/components/privacy/privacyRequestsForm.html'); setTimeout(() => {
+                    createForm(privacyForm);
+                }, 500);"class="active">Nova Solicitação</li>
+                
+                <li onclick="changeActivePrivacyMenu(this, '/app/components/privacy/privacyRequestsList.html'); setTimeout(() => {
+                    getPrivacyRequests();
+                }, 500)">Acompanhar Solicitações</li>
+                <li onclick="changeActivePrivacyMenu(this, '/app/components/privacy/privacyConfig.html')">Configurações de Privacidade</li>
+            </ul>
+        </nav>
+        <nav class="privacy-nav-mobile">
+            <div class="privacy-nav-mobile-header" onclick="showMobileMenu()">
+                <div>O que deseja?</div>
+                <div class="privacy-nav-mobile-current">Nova Solicitação</div>
+             </div>
+             <div class="privacy-nav-mobile-itens">
+                <div onclick="changeActivePrivacyMenu(this, '/app/components/privacy/privacyRequestsForm.html'); setTimeout(() => {
+                    createForm(privacyForm);
+                    changeCurrentMobileMenu(this)
+                    showMobileMenu()
+                }, 500);"class="active">Nova Solicitação</div>
+                
+                <div onclick="changeActivePrivacyMenu(this, '/app/components/privacy/privacyRequestsList.html'); setTimeout(() => {
+                    getPrivacyRequests();
+                    changeCurrentMobileMenu(this)
+                    showMobileMenu()
+                }, 500)">Acompanhar Solicitações</div>
+                <div onclick="changeActivePrivacyMenu(this, '/app/components/privacy/privacyConfig.html'); changeCurrentMobileMenu(this); showMobileMenu()">Configurações de Privacidade</li>
+            </div>
+        </nav>
+    </div>
+    <div class="privacy-wrapper">
+        
+    </div>
+
+</div>

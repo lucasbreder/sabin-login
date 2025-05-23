@@ -1,0 +1,35 @@
+.profile-button-container {
+    border-radius: 20px;
+    border: 1px solid #fff;
+    background-image: url('/app/images/icons/arrow-next.svg');
+    background-repeat: no-repeat;
+    background-size: auto 17px;
+    background-position: 90% center;
+    margin-left: 2rem;
+    padding: 1.5rem 3rem 1.5rem 1.5rem;
+    cursor: pointer;
+    margin-right: 3rem;
+}
+
+.profile-button-title {
+    color: var(--primary-color);
+    font-size: .7rem;
+    margin-bottom: .2rem;
+}
+.profile-button-name {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+    .profile-button-container {
+        padding: .5rem 1rem;
+        margin-left: -2rem;
+        width: calc(100% + 1rem);
+        box-sizing: border-box;
+        font-size: .8rem;
+        border-radius: 10px;
+        margin-right: 0;
+        background-image: url('/app/images/icons/arrow-down.svg');
+        background-size: 12px auto;
+    }
+}

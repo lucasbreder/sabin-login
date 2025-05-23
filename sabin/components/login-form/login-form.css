@@ -1,0 +1,213 @@
+.form-container,
+.confirmation-container,
+.validation-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.validation-container p span {
+    font-weight: 700;
+}
+
+.confirmation-container>p {
+    font-size: 18px;
+    line-height: 25.2px;
+    margin: 1.5rem 0;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-container label {
+    flex-basis: 100%;
+    position: relative;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.form-container input {
+    width: 100%;
+    padding: .7rem;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    outline: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: lighter;
+}
+
+.form-container input::placeholder {
+    font-size: 16px;
+}
+
+.form-container input[type='checkbox'] {
+    position: relative;
+    cursor: pointer;
+    width: 0;
+    height: 8px;
+    margin-right: 3.5rem;
+}
+
+.form-container input[type='checkbox']::before {
+    content: "";
+    display: inline-block;
+    width: 41px;
+    height: 20px;
+    background-color: var(--tertiary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+    margin-top: -1rem;
+
+}
+
+.form-container input[type='checkbox']:checked:before {
+    background-color: #02BE88;
+}
+
+.form-container input[type='checkbox']::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 3px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    border: 1px solid #fff;
+    transition: all .5s ease-in-out;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.checkbox-switch {
+    display: flex;
+    align-items: center;
+}
+
+.form-container input[type='checkbox']:checked:after {
+    left: 22px;
+    background-color: var(--tertiary-color);
+}
+
+.form-container p {
+    font-size: 18px;
+    line-height: 25.2px;
+}
+
+form button {
+    border-radius: 30px;
+    background-color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    border: none;
+    padding: 1rem;
+    margin: .8rem 0 .8rem 0;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+}
+
+input.hasIcon {
+    padding-left: 1.8rem;
+    background-position: 5px center;
+    background-size: auto 32%;
+    background-repeat: no-repeat;
+}
+
+#user {
+    background-image: url('/sabin/images/icons/user.svg');
+}
+
+#password {
+    background-image: url('/sabin/images/icons/password.svg');
+}
+
+#show-password {
+    position: absolute;
+    right: 0;
+    top: 14px;
+    width: 20px;
+    height: 20px;
+    background-image: url('/sabin/images/icons/showPassword.svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.field-feedback {
+    color: var(--primary-color);
+    font-size: .8rem;
+    font-weight: 700;
+    max-height: 0;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+    flex-basis: 100%;
+}
+
+
+.field-feedback.active {
+    max-height: 50px;
+    padding-top: .5rem;
+}
+
+#validation-form {
+    position: relative;
+}
+
+#validation-form .validationNumbers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+#validation-form input {
+    border-radius: 10px;
+    border: 1px solid #5A5D67;
+    text-align: center;
+    width: 40px;
+    height: 50px;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+.separator {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+#validation-form button {
+    flex-basis: 100%;
+}
+
+
+@media screen and (max-width: 900px) {
+    #validation-form input {
+        border-radius: 10px;
+        border: 1px solid #5A5D67;
+        text-align: center;
+        width: 35px;
+        height: 50px;
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 20px;
+    }
+}

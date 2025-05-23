@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="/sabin/helpers/phoneMask.js"></script>
+    <script src="/sabin/helpers/loadPageData.js"></script>
+    <script src="/sabin/helpers/justNumbers.js"></script>
+    <script src="/sabin/components/login-form/login-cookies.js"></script>
+    <script src="/sabin/components/login-form/login-form.js"></script>
+    <script src="/sabin/components/recover-password/recover-password.js"></script>
+    <script src="/sabin/components/thumbs/thumbs.js"></script>
+    <link rel="stylesheet" href="/sabin/global.css" />
+    <link rel="icon" href="/sabin/images/cropped-512x512-1-32x32.png" sizes="32x32">
+    <link rel="icon" href="/sabin/images/cropped-512x512-1-192x192.png" sizes="192x192">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
+    <title>Recuperação de conta</title>
+</head>
+
+
+<body>
+    <div class="page-frame">
+        <header></header>
+        <section class="page-container recover-container">
+            <div class="page-info">
+                <div id='page-content'></div>
+            </div>
+            <div class="page-thumb page-thumb-recover">
+
+            </div>
+        </section>
+    </div>
+    <script>
+        loadPageData('/sabin/components/thumbs/thumbsRecover.html', '.page-thumb')
+        loadPageData('/sabin/components/header/header.html', 'header')
+        loadPageData('/sabin/components/recover-password/recover-password.html', '#page-content')
+    </script>
+</body>
+
+</html>

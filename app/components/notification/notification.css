@@ -1,0 +1,194 @@
+.notification-lightbox {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease-in-out;
+}
+.active.notification-lightbox {
+    opacity: 1;
+}
+.notification-container {
+    position: relative;
+    z-index: 999;
+}
+.notification-icon {
+    width: 30px;
+    height: 30px;
+    background-image: url('/app/images/icons/notification.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    cursor: pointer;
+}
+.notification-counter {
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 100%;
+    box-sizing: border-box;
+    padding: .55rem .5rem .5rem .5rem; 
+    border: 2px solid var(--tertiary-color);
+    font-weight: 700;
+    font-size: .8rem;
+    position: absolute;
+    right: -20%;
+    top: 0;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+.notification-counter.active {
+    opacity: 1;
+}
+.notifications {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    pointer-events: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+.notifications.active {
+    max-height: 600px;
+    pointer-events: all;
+    padding-top: .7rem;
+}
+
+.notifications-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+.notifications-header::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22px;
+    height: 12px;
+    background-image: url('/app/images/icons/triangle-active-red.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.notifications-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: -40%;
+}
+.notification-list {
+    max-height: 200px;
+    min-height: 50px;
+    overflow-y: auto;
+    position: relative;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    overflow-x: hidden;
+}
+
+.notification-list::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+.notification-list::-webkit-scrollbar-track {
+    background: transparent;
+    overflow: auto;
+  }
+  
+.notification-list::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    background-color: #777;
+    width: 12px;
+    
+  }
+.notification-item {
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+    max-height: 200px;
+}
+.notification-item.hide {
+    opacity: 0;
+    transform: translateX(20px);
+    max-height: 0;
+    padding: 0;
+}
+.notifications-clean {
+    cursor: pointer;
+}
+.notification-item:nth-of-type(even) {
+    background-color: #E6E4EF;
+}
+
+.notification-item:nth-of-type(odd) {
+    background-color: #fff;
+}
+.notification-item-content {
+    padding-left: 2rem;
+}
+.notification-item-date {
+    flex-basis: 100%;
+    padding-left: 2rem;
+    color: #777;
+    font-size: .9rem;
+}
+.notifications-close {
+    width: 15px;
+    height: 15px;
+    background-image: url('/app/images/icons/close.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+.new::before {
+    content: "";
+    display: block;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 20px;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+}
+
+@media screen and (max-width: 900px) {
+    .notifications {
+       width: 330px;
+    }
+    .notifications-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .notifications-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    
+}

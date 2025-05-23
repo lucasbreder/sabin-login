@@ -1,0 +1,30 @@
+div#profile-thumb {
+    flex-basis: 35%;
+}
+div#exams-thumb {
+    flex-basis: 30%;
+}
+div#privacy-thumb {
+    flex-basis: 30%;
+    margin-top: 1rem;
+}
+.mobile-thumb {
+    display: none;
+}
+
+
+@media screen and (max-width: 900px) {
+    .mobile-thumb {
+        display: block;
+        height: 324px;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+        border-radius: 10px;
+    }
+    .mobile-thumb img {
+        width: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}

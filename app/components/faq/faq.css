@@ -1,0 +1,34 @@
+.faq-list {
+    display: flex;
+    flex-direction: column;
+}
+.faq-item:first-of-type {
+    border-top: 1px solid #ccc;
+}
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+    color:  #4B4B4B;
+    background-image: url('/app/images/icons/show-more.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    cursor: pointer;
+}
+.active.faq-item {
+    background-image: url('/app/images/icons/show-less.svg');
+}
+.faq-item-title {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.faq-item-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+.active .faq-item-detail {
+    max-height: 300px;
+    margin-top: 1rem;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="UTF-8">
+        <script type="text/javascript"  src="/app/helpers/loadPageData.js"></script>
+        <script type="text/javascript"  src="/app/helpers/feedbackMessage.js"></script>
+        <script type="text/javascript"  src="/app/helpers/validateInput.js"></script>
+        <script type="text/javascript"  src="/app/helpers/loading.js"></script>
+        <script type="text/javascript"  src="/app/helpers/mask.js"></script>
+        <script type="text/javascript"  src="/app/helpers/createForm.js"></script>
+        <script type="text/javascript"  src="/app/components/nav/nav.js"></script>
+        <script type="text/javascript"  src="/app/components/thumbs/thumbs.js"></script>
+        <script type="text/javascript"  src="/app/components/exams/exams.js"></script>
+        <script type="text/javascript"  src="/app/components/profile/profile.js"></script>
+        <script type="text/javascript"  src="/app/components/privacy/privacy.js"></script>
+        <script type="text/javascript"  src="/app/components/notification/notification.js"></script>
+        <script type="text/javascript"  src="/app/components/profile-button/profile-button.js"></script>
+        <script type="text/javascript"  src="/app/components/faq/faq.js"></script>
+        <link rel="stylesheet" href="/app/global.css" />
+        <link rel="icon" href="/app/images/cropped-512x512-1-32x32.png" sizes="32x32">
+        <link rel="icon" href="/app/images/cropped-512x512-1-192x192.png" sizes="192x192">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sabin</title>
+    </head>
+
+
+    <body>
+        <div class="page-frame">
+            <header class="page-header">
+                <div class="app-brand"></div>
+                <div class="app-nav"></div>
+                <div class="notifications-box"></div>
+                <div class="profile"></div>
+            </header>
+            <section class="page-content">
+                <div class="content"></div>
+                <div class="thumb"></div>
+                <div class="loading"></div>
+            </section>
+            <footer></footer>
+        </div>
+        <script>
+            loadPageData('/app/components/nav/nav.html', '.app-nav')
+            loadPageData('/app/components/notification/notification.html', '.notifications-box')
+            loadPageData('/app/components/profile-button//profile-button.html', '.profile')
+            loadPageData('/app/components/footer/footer.html', 'footer')
+            loadPageData('/app/components/exams/exams.html', '.content')
+            loadPageData('/app/components/thumbs/thumbs.html', '.thumb')
+        </script>
+    </body>
+</html>

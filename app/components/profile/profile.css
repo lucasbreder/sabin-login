@@ -1,0 +1,9 @@
+.profile-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+form label.endereco, form label.newsletter {
+    flex-basis: 100%;
+}

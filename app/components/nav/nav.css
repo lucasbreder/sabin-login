@@ -1,0 +1,133 @@
+.nav-main-list {
+    display: flex;
+    gap: 2rem;
+    margin-right: 2rem;
+}
+.nav-main-item {
+    position: relative;
+}
+
+.nav-main-item a {
+    padding: 0 0 0 60px;
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    transition: all .2s ease-in-out;
+}
+.nav-main-item::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s ease-in-out;
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 50%;
+}
+.active::before {
+    background-position: 25px center;
+}
+.nav-main-item::after {
+    content: '';
+    width: 30px;
+    height: 20px;
+    background-color: transparent;
+    position: absolute;
+    bottom: -65%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .5s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+.active.nav-main-item a {
+    padding: 0 20px 0 60px;
+}
+.nav-main-item.active::after {
+    background-image: url('/app/images/icons/triangle-active.svg');
+}
+#exam::before {
+    background-image: url('/app/images/icons/results.svg');
+}
+#exam:hover::before {
+    background-image: url('/app/images/icons/results-active.svg');
+}
+.active#exam::before {
+    background-image: url('/app/images/icons/results-active.svg');
+}
+#profile::before {
+    background-image: url('/app/images/icons/profile.svg');
+}
+#profile:hover::before {
+    background-image: url('/app/images/icons/profile-active.svg');
+}
+.active#profile::before {
+    background-image: url('/app/images/icons/profile-active.svg');
+}
+#privacy-manage::before {
+    background-image: url('/app/images/icons/manage.svg');
+}
+#privacy-manage:hover::before {
+    background-image: url('/app/images/icons/manage-active.svg');
+}
+.active#privacy-manage::before {
+    background-image: url('/app/images/icons/manage-active.svg');
+}
+.nav-main-item:hover::before {
+    background-color: #fff;
+}
+.nav-main-item.active::before {
+    width: 100%;
+    background-color: #fff;
+}
+.text-mobile {
+    display: none;
+}
+@media screen and (max-width: 900px) {
+
+    .nav-main-list {
+        gap: .5rem;
+        padding: 0 .5rem;
+        margin-right: 0;
+    }
+    .nav-main-item a {
+        padding: 0 15px 0 45px;
+        font-size: .8rem;
+        height: 40px;
+    }
+    .active.nav-main-item a {
+        padding: 0px 10px 0 45px;
+    }
+    .nav-main-item::before {
+        width: 40px;
+        height: 40px;
+    }
+    .nav-main-item.active::before {
+        width: 100%;
+       height: 100%;
+    }
+    .active::before {
+        background-position: 15px center;
+    }
+    .nav-main-item::after {
+        bottom: -45%;
+    }
+    .text-mobile {
+        display: inline;
+    }
+    .text-desktop {
+        display: none;
+    }
+    
+}

@@ -1,0 +1,12 @@
+<div class="profile-button-container" onclick="
+    changeMenu(this, '/app/components/profile/profile.html');  
+    changeThumb('/app/images/banners/banner-index.png', 'exams-thumb')
+    setActiveMenu('#profile')
+    setTimeout(() => {
+        createForm(profileForm, 'Atualizar');
+        getProfileFormData()
+    
+}, 500);">
+    <div class="profile-button-title">Seu perfil</div>
+    <div class="profile-button-name"></div>
+</div>

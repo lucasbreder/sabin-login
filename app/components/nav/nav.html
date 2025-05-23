@@ -1,0 +1,39 @@
+
+    <nav class="nav-main">
+        <ul class="nav-main-list">
+            <li onclick="
+                changeMenu(this, '/app/components/exams/exams.html');
+                setTimeout(() => {
+                    getExams();
+                    getProfile()
+                    changeThumb('/app/images/banners/banner-index.png', 'exams-thumb')
+                }, 500);" 
+                class="nav-main-item active" id="exam"><a href="#">Meus<br/>Exames</a></li>
+            
+            <li onclick="
+            changeThumb('/app/images/banners/banner-profile.svg', 'profile-thumb')
+            changeMenu(this, '/app/components/profile/profile.html');
+            setTimeout(() => {
+                    createForm(profileForm, 'Atualizar');
+                    getProfileFormData()
+                    
+                }, 500);
+            
+            " 
+            
+            class="nav-main-item" id="profile"><a href="#"><span class="text-desktop">Editar<br/>meus dados</span><span class="text-mobile">Meus dados</span></a></li>
+            <li 
+            onclick="
+            changeThumb('/app/images/banners/banner-manage.svg', 'privacy-thumb')
+            changeMenu(this, '/app/components/privacy/privacy.html');
+              setTimeout(() => {
+                loadPageData('/app/components/privacy/privacyRequestsForm.html', '.privacy-wrapper')
+                loadPageData('/app/components/faq/faq.html', '.aside-container')
+                }, 500);
+                setTimeout(() => {
+                    createForm(privacyForm);
+                    
+                }, 800);
+                " class="nav-main-item" id="privacy-manage"><a href="#">Gestão de<br/>Consentimento</a></li>
+        </ul>
+    </nav>

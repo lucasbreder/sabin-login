@@ -1,0 +1,1 @@
+setTimeout(() => window.addEventListener('onload', changeThumb('/sabin/images/thumbs/confirm-thumb.png')), 1000)
